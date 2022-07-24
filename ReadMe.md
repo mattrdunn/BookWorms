@@ -1,6 +1,21 @@
 # BookWorms
 BookWorms is a web application designed to facilitate discussion and exploration of written works for collaborative study. Under development.
 
+## Introduction
+The idea was formed in attempting to facilitate a virtual book club among friends during the COVID-19 lockdown in 2020. We tried using Google docs for tracking current readings, prompts, discussions, and individual reflections on the week's readings. However, we found this to be lacking in providing a cohesive, pain-free experience. There were a handful of use cases that were particularly difficult to address with existing teechnologies:
+- easily share or refer to quotes/passages
+- hiding individual reflections before the weekly meet time (wihtout keeping them in a separate app/location)
+  - if you do the reading early in the week, you may do a post-reading write up in a notes app, and later move it to the doc for others to read
+
+## Features
+A broad overview of features I'd like to provide through this web app are:
+- Personal accounts
+- Ability to create, invite, and join clubs
+- Library of readings (personal or by club)
+- Each member able to create annotations/highlights of a shared text. At the end of each week, everyone would be able to see each others' comments and highlights. Later implementations may provide some kind of breakdown/analysis of popular highlights, interesting stats/trends, etc.
+- Create reflection prompts for readings, with all members able to submit responses at any point in the assignment period.
+  - We frequently would search for common prompts for particular books online, then add them to the shared document. One QoL feature would be a web scraper function which would automatically perform this action, and return a list of possible reflection prompts.
+
 ## Tech Stack (Proposed)
 ### Frontend
 - React
@@ -18,6 +33,7 @@ BookWorms is a web application designed to facilitate discussion and exploration
 - _Research others_
 ### Functional Testing
 - Mocha/Chai
+- Jest
 - _Research frameworks_
 
 ## Functional Requirements
@@ -38,6 +54,13 @@ BookWorms is a web application designed to facilitate discussion and exploration
 1. Scalable
 1. Quick read access of files
 1. Durability of files & annotations
+
+## Considerations
+There is the possbility of complications with intellectual property, copyrights, etc in giving users the ability to upload and share files. What if a user uploads a file that was obtained outside of legal channels? Is the distribution of alegally obtained files illegal (i.e. user pays for it and shares it for free)? Is it legal to distribute
+
+I'm more of a software engineering expert than legal one, but this may require some specific legalese Terms of Service for users in order for them to create an account. In addition, there would need to be some kind of checks in place to uphold said Terms of Service. One example would be scanning/processing any uploaded files for signs of copyright, IP, or otherwise unpermitted content.
+
+Of course this web app can simply exist as a proof of concept and fun project (as it will likely remain), but there would likely need to be lots of hoops to jump through for someting like this to exist at any capacity as a real-life, customer-facing application. The easiest path forward to that might be something along the lines of a deal or partnership with an eBook provider (e.g. Amazon) by integrating with their selection in order to ensure legal distribution of intellectual property.
 
 <!-- ## Definition of Done -->
 
